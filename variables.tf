@@ -16,8 +16,8 @@ EOT
     recovery_vault_name = string
     resource_group_name = string
     backup_policy_id    = optional(string)
-    exclude_disk_luns   = optional(set(string))
-    include_disk_luns   = optional(set(string))
+    exclude_disk_luns   = optional(set(number))
+    include_disk_luns   = optional(set(number))
     protection_state    = optional(string)
     source_vm_id        = optional(string)
   }))
