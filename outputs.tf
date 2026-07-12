@@ -1,3 +1,7 @@
+output "backup_protected_vms_id" {
+  description = "Map of id values across all backup_protected_vms, keyed the same as var.backup_protected_vms"
+  value       = { for k, v in azurerm_backup_protected_vm.backup_protected_vms : k => v.id }
+}
 output "backup_protected_vms_backup_policy_id" {
   description = "Map of backup_policy_id values across all backup_protected_vms, keyed the same as var.backup_protected_vms"
   value       = { for k, v in azurerm_backup_protected_vm.backup_protected_vms : k => v.backup_policy_id }
